@@ -5,6 +5,7 @@ import {
   Dimensions,
   StyleSheet,
   ViewStyle,
+  Platform,
 } from "react-native";
 import { EdgeInsets, useSafeAreaInsets } from "react-native-safe-area-context";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
@@ -138,9 +139,11 @@ const PokemonDetailScreen: React.FC<HomeStackNavProps<"Detail">> = ({ navigation
               />
           ))}
         </PokemonDetailSection>
-        <View
-          style={emptyViewStyle(bottomTabHeight)}
-        />
+        {Platform.OS !== "ios" && (
+          <View
+            style={emptyViewStyle(bottomTabHeight)}
+          />
+        )}
       </Animated.ScrollView>
     </View>
   );
