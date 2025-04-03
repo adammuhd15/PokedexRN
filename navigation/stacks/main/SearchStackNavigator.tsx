@@ -12,7 +12,7 @@ const SearchStackNavigator = () => {
       <SearchStack.Screen
         name="Search"
         component={SearchScreen}
-        // options={{ headerShown: false }}
+        options={{ headerShown: false }}
         // options={{ header: () => null }}
       />
     </SearchStack.Navigator>

@@ -2,11 +2,12 @@ import { configureStore } from "@reduxjs/toolkit";
 
 // Local imports
 import homeReducer from "../slice/homeReducer";
+import searchReducer from "../slice/searchReducer";
 
 export const store = configureStore({
   reducer: {
     home: homeReducer,
-    // search: searchReducer,
+    search: searchReducer,
     // profile: profileReducer,
   },
 });
