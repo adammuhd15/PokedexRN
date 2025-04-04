@@ -15,6 +15,7 @@ const Pokeball: React.FC<PokeballProps> = ({ style }) => {
   return (
     <View
       style={[pokeballStyles.pokeballContainer, style]}
+      testID="pokeballTestID"
     >
       <View
         style={pokeballStyles.pokeballTopRed}
