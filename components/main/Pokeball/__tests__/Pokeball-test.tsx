@@ -4,8 +4,11 @@ import Pokeball from "../";
 
 describe("<Pokeball />", () => {
   test("Pokeball renders correctly", () => {
-    const { getByTestId } = render(<Pokeball />);
+    const { getByTestId, queryAllByTestId } = render(<Pokeball />);
 
-    getByTestId("pokeballTestID");
+    const tree = queryAllByTestId("pokeball");
+
+    expect(tree.length).toBe(1);
+    expect(getByTestId("pokeball")).toBeTruthy();
   });
 });

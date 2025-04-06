@@ -6,13 +6,17 @@ import PokemonDetailSection from "../";
 describe("<PokemonDetailSection />", () => {
   test("Text renders correctly on PokemonDetailSection", () => {
     
-    const { getByText } = render(
+    const { getByText, getByTestId, queryAllByTestId } = render(
       <PokemonDetailSection
         title="Flamethrower"
         children={<View />}
       />
     );
 
-    getByText("Flamethrower");
+    const tree = queryAllByTestId("pokemon-detail-section");
+
+    expect(tree.length).toBe(1);
+    expect(getByTestId("pokemon-detail-section")).toBeTruthy();
+    expect(getByText("Flamethrower")).toBeTruthy();
   });
 });

@@ -21,6 +21,7 @@ const BottomTabProfileImage: React.FC<BottomTabProfileImageProps> = ({
   return (
     <View
       style={[tabProfileImageStyles.profileImageContainer, tabContainerStyle(size, focused)]}
+      testID="bottom-tab-profile-image"
     >
       <Image
         source={{ uri: "https://images.unsplash.com/photo-1463453091185-61582044d556?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }}

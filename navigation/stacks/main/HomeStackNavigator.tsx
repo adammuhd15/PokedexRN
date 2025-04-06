@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 // Local imports
 import HomeScreen from "../../../screens/main/HomeScreen";
@@ -9,6 +10,7 @@ import HomeHeader from "../../../components/main/HomeHeader";
 const HomeStack = createNativeStackNavigator<HomeStackParamList>();
 
 const HomeStackNavigator = () => {
+  const safeInsets = useSafeAreaInsets();
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen
@@ -16,7 +18,7 @@ const HomeStackNavigator = () => {
         component={HomeScreen}
         options={{
           header: () => (
-            <HomeHeader />
+            <HomeHeader safeInsetsTop={safeInsets.top} />
           ),
         }}
       />

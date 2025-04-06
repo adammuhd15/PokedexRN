@@ -20,6 +20,7 @@ export interface PokemonDetailHeaderProps {
   pokemonName: string,
   pokemonInformation: GetPokemonDetailsProps,
   handleGoBack: () => void,
+  safeInsetsTop: number,
 };
 
 export interface PokemonDetailHeaderStyleProps {

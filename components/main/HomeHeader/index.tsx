@@ -5,18 +5,17 @@ import {
   Text,
   ViewStyle,
 } from "react-native";
-import { EdgeInsets, useSafeAreaInsets } from "react-native-safe-area-context";
 
 // Local imports
 import * as Colors from "../../../constants/Colors";
 import Pokeball from "../Pokeball";
-import { HomeHeaderProps } from "../HomeProps";
+import { HomeHeaderProps, HomeHeaderStyleProps } from "../HomeProps";
 
-const HomeHeader = () => {
-  const safeInsets = useSafeAreaInsets();
+const HomeHeader: React.FC<HomeHeaderProps> = ({ safeInsetsTop }) => {
   return (
     <View
-      style={[homeHeaderStyles.homeHeaderContainer, homeHeaderPassStyle(safeInsets)]}
+      style={[homeHeaderStyles.homeHeaderContainer, homeHeaderPassStyle(safeInsetsTop)]}
+      testID="home-header"
     >
       {/* Pokeball */}
       <Pokeball
@@ -33,11 +32,11 @@ const HomeHeader = () => {
 }
 
 // Function for dynamic style
-const homeHeaderPassStyle = (safeInsets: EdgeInsets): ViewStyle => ({
-  paddingTop: safeInsets.top + 24,
+const homeHeaderPassStyle = (safeInsetsTop: number): ViewStyle => ({
+  paddingTop: safeInsetsTop + 24,
 });
 
-const homeHeaderStyles = StyleSheet.create<HomeHeaderProps>({
+const homeHeaderStyles = StyleSheet.create<HomeHeaderStyleProps>({
   homeHeaderContainer: {
     width: "100%",
     paddingHorizontal: 24,

@@ -69,6 +69,7 @@ const PokemonDetailScreen: React.FC<HomeStackNavProps<"Detail">> = ({ navigation
           pokemonName={capitalizeFirstAlphabet(name)}
           pokemonInformation={pokemonInformation}
           handleGoBack={handleGoBack}
+          safeInsetsTop={safeInsets.top}
         />
       ),
       headerTransparent: true,

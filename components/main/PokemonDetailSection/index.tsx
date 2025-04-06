@@ -17,7 +17,10 @@ const PokemonDetailSection: React.FC<PokemonDetailSectionProps> = ({
   title
 }) => {
   return (
-    <View style={pokeSectionStyles.pokeSectionContainer}>
+    <View
+      style={pokeSectionStyles.pokeSectionContainer}
+      testID="pokemon-detail-section"
+    >
       <Text
         style={pokeSectionStyles.pokeSectionTitle}
       >{title}</Text>

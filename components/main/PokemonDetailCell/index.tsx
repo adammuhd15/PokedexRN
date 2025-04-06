@@ -26,6 +26,7 @@ const PokemonDetailCell: React.FC<PokemonDetailCellProps> = ({
   return (
     <View
       style={[pokeCellStyles.pokeCellContainer, cellContainerStyle(backgroundColor, index)]}
+      testID="pokemon-detail-cell"
     >
       <Text
         style={pokeCellStyles.pokeCellText}

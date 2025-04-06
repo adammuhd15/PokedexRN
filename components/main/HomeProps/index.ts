@@ -9,6 +9,10 @@ import { GetPokemonDetailsProps } from "../../../utils/pokemon/PokemonDetailProp
 
 // Header
 export interface HomeHeaderProps {
+  safeInsetsTop: number;
+};
+
+export interface HomeHeaderStyleProps {
   homeHeaderContainer: ViewStyle;
   homeHeaderPokeball: ViewStyle;
   homeHeaderText: TextStyle;

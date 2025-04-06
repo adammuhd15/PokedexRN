@@ -22,6 +22,7 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ item, onDetailPressItem }) =>
     <TouchableOpacity
       style={pokeCardStyles.cardContainer}
       onPress={handleFilterID}
+      testID="pokemon-card"
     >
       <Text style={pokeCardStyles.cardText}>Name: {capitalizeFirstAlphabet(item.name)}</Text>
     </TouchableOpacity>

@@ -11,7 +11,6 @@ import {
   ImageStyle,
 } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { EdgeInsets, useSafeAreaInsets } from "react-native-safe-area-context";
 
 // Local imports
 import * as Colors from "../../../constants/Colors";
@@ -35,6 +34,7 @@ const PokemonDetailHeader: React.FC<PokemonDetailHeaderProps> = ({
   pokemonName,
   pokemonInformation,
   handleGoBack,
+  safeInsetsTop,
 }) => {
   // Carousel ref start
   const pokemonSprites = [
@@ -48,15 +48,15 @@ const PokemonDetailHeader: React.FC<PokemonDetailHeaderProps> = ({
     pokemonInformation.sprites.back_shiny_female,
   ].filter(Boolean); // Filter out null or undefined values
   // Carousel ref end
-  const safeInsets = useSafeAreaInsets();
   // Switch background color
   const typeName: string = pokemonInformation.types[0].type.name;
   const typeBackgroundColor: string = PokemonColors[typeName as keyof PokemonColorProps];
   return (
     <>
       <TouchableOpacity
-        style={[pokeHeaderStyles.fixBackButton, fixBackButtonStyle(safeInsets)]}
+        style={[pokeHeaderStyles.fixBackButton, fixBackButtonStyle(safeInsetsTop)]}
         onPress={handleGoBack}
+        testID="back-button"
       >
         <Ionicons
           name="chevron-back"
@@ -68,12 +68,13 @@ const PokemonDetailHeader: React.FC<PokemonDetailHeaderProps> = ({
         style={[
           pokeHeaderStyles.headerContainer,
           headerContainerAnimationStyle(
-            safeInsets,
+            safeInsetsTop,
             typeBackgroundColor,
             translateHeader,
             scaleHeader
           )
         ]}
+        testID="pokemon-detail-header"
       >
         <View style={[pokeHeaderStyles.imageWrapper, { alignSelf: "center" }]}>
           <ScrollView
@@ -91,6 +92,7 @@ const PokemonDetailHeader: React.FC<PokemonDetailHeaderProps> = ({
                   headerImageAnimationStyle(scaleImage, opacityImage),
                 ]}
                 source={{ uri: sprite ?? "" }}
+                testID={`pokemon-image-${index}`}
               />
             ))}
           </ScrollView>
@@ -117,18 +119,18 @@ const headerImageAnimationStyle = (
 });
 
 const headerContainerAnimationStyle = (
-  safeInsets: EdgeInsets,
+  safeInsetsTop: number,
   typeBackgroundColor: string,
   translateHeader: Animated.AnimatedInterpolation<string | number>,
   scaleHeader: Animated.AnimatedInterpolation<string | number>,
 ): ViewStyle => ({
-  height: safeInsets.top + (screenWidth / 2) + 60,
+  height: safeInsetsTop + (screenWidth / 2) + 60,
   backgroundColor: typeBackgroundColor,
   transform: [{ translateY: translateHeader }, { scale: scaleHeader }],
 });
 
-const fixBackButtonStyle = (safeInsets: EdgeInsets): ViewStyle => ({
-  bottom: (screenWidth / 2) - safeInsets.top + 36 + 15,
+const fixBackButtonStyle = (safeInsetsTop: number): ViewStyle => ({
+  bottom: (screenWidth / 2) - safeInsetsTop + 36 + 15,
 });
 
 // StyleSheet
