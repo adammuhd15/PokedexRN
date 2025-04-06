@@ -9,7 +9,7 @@ import {
 } from "react-native";
 
 // Local imports
-import { GetPokemonDetailsProps } from "../../utils/pokemon/PokemonDetailProps";
+import { GetPokemonDetailsProps } from "../../../utils/pokemon/PokemonDetailProps";
 
 // Header
 export interface PokemonDetailHeaderProps {

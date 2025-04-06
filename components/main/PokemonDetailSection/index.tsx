@@ -6,11 +6,11 @@ import {
 } from "react-native";
 
 // Local imports
-import * as Colors from "../../constants/Colors";
+import * as Colors from "../../../constants/Colors";
 import {
   PokemonDetailSectionProps,
   PokemonDetailSectionStyleProps,
-} from "./PokemonDetailProps";
+} from "../PokemonDetailProps";
 
 const PokemonDetailSection: React.FC<PokemonDetailSectionProps> = ({
   children,

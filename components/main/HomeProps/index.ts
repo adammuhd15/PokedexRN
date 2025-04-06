@@ -4,8 +4,8 @@ import {
 } from "react-native";
 
 // Local imports
-import { PokemonProps } from "../../utils/pokemon/AllPokemonProps";
-import { GetPokemonDetailsProps } from "../../utils/pokemon/PokemonDetailProps";
+import { PokemonProps } from "../../../utils/pokemon/AllPokemonProps";
+import { GetPokemonDetailsProps } from "../../../utils/pokemon/PokemonDetailProps";
 
 // Header
 export interface HomeHeaderProps {

@@ -2,12 +2,12 @@ import { FlatList, StyleSheet } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 
 // Local imports
-import ResultListCell from "./ResultListCell";
+import ResultListCell from "../ResultListCell";
 import {
   onChangeData,
   onChangeInput
-} from "../../redux/slice/searchReducer";
-import { AppDispatch, RootState } from "../../redux/store";
+} from "../../../redux/slice/searchReducer";
+import { AppDispatch, RootState } from "../../../redux/store";
 
 interface AddressProps {
   name: string;

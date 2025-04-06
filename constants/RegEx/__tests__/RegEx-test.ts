@@ -1,4 +1,4 @@
-import { emailRegEx, nameRegEx } from "../RegEx";
+import { emailRegEx, nameRegEx } from "../";
 
 describe("Reg Ex", () => {
   it("Email Regex", () => {

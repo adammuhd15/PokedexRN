@@ -5,11 +5,11 @@ import {
 } from "react-native";
 
 // Local imports
-import * as Colors from "../../constants/Colors";
+import * as Colors from "../../../constants/Colors";
 import {
   PokeballProps,
   PokeballStyleProps,
-} from "./PokemonDetailProps";
+} from "../PokemonDetailProps";
 
 const Pokeball: React.FC<PokeballProps> = ({ style }) => {
   return (

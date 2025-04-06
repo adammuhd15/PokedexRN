@@ -14,16 +14,16 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { EdgeInsets, useSafeAreaInsets } from "react-native-safe-area-context";
 
 // Local imports
-import * as Colors from "../../constants/Colors";
+import * as Colors from "../../../constants/Colors";
 import {
   PokemonColorProps,
   PokemonColors,
-} from "../../constants/PokemonColors";
-import Pokeball from "./Pokeball";
+} from "../../../constants/PokemonColors";
+import Pokeball from "../Pokeball";
 import {
   PokemonDetailHeaderProps,
   PokemonDetailHeaderStyleProps,
-} from "./PokemonDetailProps";
+} from "../PokemonDetailProps";
 
 const screenWidth = Dimensions.get("window").width;
 

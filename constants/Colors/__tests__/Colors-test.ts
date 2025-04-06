@@ -1,4 +1,4 @@
-import * as Colors from "../Colors";
+import * as Colors from "../";
 
 describe("Colors", () => {
   it("Is Primary Theme", () => {

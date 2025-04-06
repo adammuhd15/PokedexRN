@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import { render } from "@testing-library/react-native";
 
-import PokemonDetailSection from "../PokemonDetailSection";
+import PokemonDetailSection from "../";
 
 describe("<PokemonDetailSection />", () => {
   test("Text renders correctly on PokemonDetailSection", () => {

@@ -6,13 +6,13 @@ import {
 } from "react-native";
 
 // Local imports
-import * as Colors from "../../constants/Colors";
-import { capitalizeFirstAlphabet } from "../../services/helper/CapitalizeFirst";
-import { GetPokemonDetailsProps } from "../../utils/pokemon/PokemonDetailProps";
+import * as Colors from "../../../constants/Colors";
+import { capitalizeFirstAlphabet } from "../../../services/helper/CapitalizeFirst";
+import { GetPokemonDetailsProps } from "../../../utils/pokemon/PokemonDetailProps";
 import {
   PokemonCardProps,
   PokemonCardStyleProps,
-} from "./HomeProps";
+} from "../HomeProps";
 
 const PokemonCard: React.FC<PokemonCardProps> = ({ item, onDetailPressItem }) => {
   const handleFilterID = () => {

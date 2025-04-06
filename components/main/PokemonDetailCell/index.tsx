@@ -9,12 +9,12 @@ import {
 } from "react-native";
 
 // Local imports
-import * as Colors from "../../constants/Colors";
-import { capitalizeFirstAlphabet } from "../../services/helper/CapitalizeFirst";
+import * as Colors from "../../../constants/Colors";
+import { capitalizeFirstAlphabet } from "../../../services/helper/CapitalizeFirst";
 import {
   PokemonDetailCellProps,
   PokemonDetailCellStyleProps,
-} from "./PokemonDetailProps";
+} from "../PokemonDetailProps";
 
 const screenWidth = Dimensions.get("window").width;
 

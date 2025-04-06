@@ -1,4 +1,4 @@
-import { PokemonColors } from "../PokemonColors";
+import { PokemonColors } from "../";
 
 describe("Pokemon Colors", () => {
   it("Is Normal Theme", () => {

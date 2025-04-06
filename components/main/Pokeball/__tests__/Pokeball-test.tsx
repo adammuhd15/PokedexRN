@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react-native";
 
-import Pokeball from "../Pokeball";
+import Pokeball from "../";
 
 describe("<Pokeball />", () => {
   test("Pokeball renders correctly", () => {

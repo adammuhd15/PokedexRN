@@ -8,8 +8,8 @@ import {
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
 // Local imports
-import { AppDispatch } from "../../redux/store";
-import { onSelected } from "../../redux/slice/searchReducer";
+import { AppDispatch } from "../../../redux/store";
+import { onSelected } from "../../../redux/slice/searchReducer";
 
 interface ResultListCellProps {
   item: any;

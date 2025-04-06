@@ -8,9 +8,9 @@ import {
 import { EdgeInsets, useSafeAreaInsets } from "react-native-safe-area-context";
 
 // Local imports
-import * as Colors from "../../constants/Colors";
-import Pokeball from "./Pokeball";
-import { HomeHeaderProps } from "./HomeProps";
+import * as Colors from "../../../constants/Colors";
+import Pokeball from "../Pokeball";
+import { HomeHeaderProps } from "../HomeProps";
 
 const HomeHeader = () => {
   const safeInsets = useSafeAreaInsets();

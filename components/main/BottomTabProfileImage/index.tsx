@@ -8,11 +8,11 @@ import {
 } from "react-native";
 
 // Local imports
-import * as Colors from "../../constants/Colors";
+import * as Colors from "../../../constants/Colors";
 import {
   BottomTabProfileImageProps,
   BottomTabProfileImageStyleProps,
-} from "./BottomTabProps";
+} from "../BottomTabProps";
 
 const BottomTabProfileImage: React.FC<BottomTabProfileImageProps> = ({
   size,

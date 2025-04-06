@@ -6,7 +6,7 @@ import {
 import { useSelector } from "react-redux";
 
 // Local imports
-import { RootState } from "../../redux/store";
+import { RootState } from "../../../redux/store";
 
 interface LocationTextFieldProps {
   onChangeInnerText: (text: string) => void;

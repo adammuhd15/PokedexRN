@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react-native";
 
-import PokemonCard from "../PokemonCard";
+import PokemonCard from "../";
 
 describe("<PokemonCard />", () => {
   test("Text renders correctly on PokemonCard", () => {
